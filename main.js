@@ -3,7 +3,7 @@ const stop = document.getElementById("pausar");
 const reset = document.getElementById("resetar");
 
 const workMinutes = document.getElementById("workMinutes");
-const workSeconds = document.getElementById("workSeconds");
+const work  Seconds = document.getElementById("workSeconds");
 
 const breakMinutes = document.getElementById("breakMinutes");
 const breakSeconds = document.getElementById("breakSeconds");
