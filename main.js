@@ -1,15 +1,15 @@
-var start = document.getElementById("iniciar");
-var stop = document.getElementById("pausar");
-var reset = document.getElementById("resetar");
+const start = document.getElementById("iniciar");
+const stop = document.getElementById("pausar");
+const reset = document.getElementById("resetar");
 
-var workMinutes = document.getElementById("workMinutes");
-var workSeconds = document.getElementById("workSeconds");
+const workMinutes = document.getElementById("workMinutes");
+const workSeconds = document.getElementById("workSeconds");
 
-var breakMinutes = document.getElementById("breakMinutes");
-var breakSeconds = document.getElementById("breakSeconds");
+const breakMinutes = document.getElementById("breakMinutes");
+const breakSeconds = document.getElementById("breakSeconds");
 
 // Armazena uma referência a uma variavel do timer
-var startTimer;
+let startTimer;
 
 start.addEventListener("click", function () {
   if (startTimer === undefined) {
@@ -43,7 +43,7 @@ function timer() {
     workSeconds.innerText--;
   } else if (workMinutes.innerText != 0 && workSeconds.innerText == 0) {
     workSeconds.innerText = 59;
-    workSeconds.innerText--;
+    workMinutes.innerText--;
   }
 
   //Contagem regressiva do temporizador de pausa
@@ -51,7 +51,7 @@ function timer() {
     if (breakSeconds.innerText != 0) {
       breakSeconds.innerText--;
     } else if (breakMinutes.innerText != 0 && breakSeconds.innerText == 0) {
-      breakMinutes.innerText = 59;
+      breakSeconds.innerText = 59;
       breakMinutes.innerText--;
     }
   }
